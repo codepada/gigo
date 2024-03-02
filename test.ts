@@ -4,3 +4,6 @@ input.onButtonPressed(Button.A, function() {
 input.onButtonPressed(Button.B, function () {
     motor.MotorStop(motor.MotorChannel.E)
 })
+input.onButtonPressed(Button.AB, function() {
+    gigoLED.led_onoff(gigoLED.LEDChannel.D, gigoLED.LEDShaftonoff.HIGH)
+})
