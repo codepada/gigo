@@ -19,12 +19,16 @@ Blocks that support [LEARNING LAB - MICROBIT COMPATIBLE ROBOT](https://padabook.
 
 ## Gigo control box
 ```package
-The kit begins with instructions to build 16 simple 
-motorized robots with sensors that can control the robots. 
-With over one hundred snap-together, versatile building pieces, 
-kids can also construct new robots of their own design!
-Once you've built your robots, you'll add code to program them 
-and bring them to life. Robotics Workshop utilizes micro:bit
+As shown below, the micro:bit control box uses six AA batteries,
+with 1 external input power interface (female micro USB). 
+Use a power supply around DC 5V/2A (a similar power level to a tablet charger,
+no more). Batteries cannot be charged while in the device,
+any batteries in the device will stop being used when it is plugged in.
+There is also a built-in buzzer, 8 sets of I/O (Gigo type)and
+8 sets of I/O DuPont connectors (see the micro:bit pin configuration diagram for details).
+These I/O interfaces provide micro:bit external connections to the 50X PLANETARY GEARBOX (DDM),
+180° SERVO MOTOR (METAL GEAR), LINE SENSOR, FORCE SENSOR, and other devices.
+Users can also purchase other compatible sensors or servo motors.
 ```
 
 ### gigo pinout
