@@ -1,5 +1,5 @@
 namespace sensor {
-    //external button
+    
     export enum ForcesensorChannel {
         //% block="A (P20)"
         A,
@@ -165,7 +165,7 @@ namespace motor {
 }
 namespace gigoLED {
     //led
-    export enum lEDChannel {
+    export enum LEDChannel {
         //% block="A (P19)"
         A,
         //% block="B (P14)"
@@ -183,17 +183,17 @@ namespace gigoLED {
         //% block="H (P1)"
         H,
     }
-    export let lEDChannels: { [key: number]: DigitalPin } = {
-        [lEDChannel.A]: DigitalPin.P19,
-        [lEDChannel.B]: DigitalPin.P14,
-        [lEDChannel.C]: DigitalPin.P2,
-        [lEDChannel.D]: DigitalPin.P8,
-        [lEDChannel.E]: DigitalPin.P15,
-        [lEDChannel.F]: DigitalPin.P13,
-        [lEDChannel.G]: DigitalPin.P12,
-        [lEDChannel.H]: DigitalPin.P1,
+    export let LEDChannels: { [key: number]: DigitalPin } = {
+        [LEDChannel.A]: DigitalPin.P19,
+        [LEDChannel.B]: DigitalPin.P14,
+        [LEDChannel.C]: DigitalPin.P2,
+        [LEDChannel.D]: DigitalPin.P8,
+        [LEDChannel.E]: DigitalPin.P15,
+        [LEDChannel.F]: DigitalPin.P13,
+        [LEDChannel.G]: DigitalPin.P12,
+        [LEDChannel.H]: DigitalPin.P1,
     }
-    export enum lEDShaftonoff {
+    export enum LEDShaftonoff {
         //% block="off"
         LOW,
         //% block="on"
@@ -207,10 +207,10 @@ namespace gigoLED {
     //% Status.min=0 Status.max=1
     //% leds.defl=lEDChannel.D
     //% group="Led"
-    export function ledtest(leds: lEDChannel, Status: number): void {
-        let ledg = lEDChannels[leds];
+    export function led_status(leds: LEDChannel, Status: number): void {
+        let led = LEDChannels[leds];
 
-        pins.digitalWritePin(ledg, Status);
+        pins.digitalWritePin(led, Status);
 
     }
 
@@ -219,10 +219,10 @@ namespace gigoLED {
     //% Status.defl=lEDShaftonoff.HIGH*
     //% leds.defl=lEDChannel.D
     //% group="Led"
-    export function led(leds: lEDChannel, Status: lEDShaftonoff): void {
-        let ledg2 = lEDChannels[leds];
+    export function led_onoff(leds: LEDChannel, Status: LEDShaftonoff): void {
+        let led = LEDChannels[leds];
 
-        pins.digitalWritePin(ledg2, Status);
+        pins.digitalWritePin(led, Status);
 
     }
     //% color=#FACB09
@@ -232,15 +232,15 @@ namespace gigoLED {
     //% expandableArgumentMode="toggle"
     //% pin.defl=lEDChannel.D
     //% group="Led"
-    export function ledBrightness(pin: lEDChannel, ledstate: boolean): void {
+    export function led_toggle(pin: LEDChannel, ledstate: boolean): void {
         if (ledstate) {
-            let pinled = lEDChannels[pin];
+            let pinled = LEDChannels[pin];
             pins.digitalWritePin(pinled, 1);
 
         }
         else {
-            let pinled2 = lEDChannels[pin];
-            pins.digitalWritePin(pinled2, 0);
+            let pinled = LEDChannels[pin];
+            pins.digitalWritePin(pinled, 0);
 
         }
     }
