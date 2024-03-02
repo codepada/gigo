@@ -112,10 +112,10 @@ control with toggle on off
 ```
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    gigoLED.ledBrightness(gigoLED.lEDChannel.D, true)
+    gigoLED.led_toggle(gigoLED.LEDChannel.D, true)
 })
 input.onButtonPressed(Button.B, function () {
-    gigoLED.ledBrightness(gigoLED.lEDChannel.D, false)
+    gigoLED.led_toggle(gigoLED.LEDChannel.D, false)
 })
 
 ```
