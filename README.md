@@ -57,7 +57,7 @@ basic.forever(function () {
 
 ```package
 when forcesensor is pressed led show icon Heart
-    ture and false
+    true and false
 ```
 ```blocks
 basic.forever(function () {
