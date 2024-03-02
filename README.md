@@ -26,8 +26,7 @@ kids can also construct new robots of their own design!
 Once you've built your robots, you'll add code to program them 
 and bring them to life. Robotics Workshop utilizes micro:bit
 ```
-![Box](https://github.com/codepada/gigo/blob/master/picture/micorbitbox.png)
-![pinout](https://github.com/codepada/gigo/blob/master/picture/pinout.png)
+
 ### gigo pinout
 ```package
 pinout gigo control box
@@ -41,7 +40,6 @@ G(P2,P12)
 H(P8,P1)
 ```
 ### Read Forcesensor
-![forcesensor](https://github.com/codepada/gigo/blob/master/picture/forcesensor.png)
 
 ```package
 Read force sensor and show number (0 or 1)
@@ -51,7 +49,6 @@ basic.forever(function () {
     basic.showNumber(sensor.Readbutton(sensor.ForcesensorChannel.A))
 })
 ```
-![buttonread](https://github.com/codepada/gigo/blob/master/picture/readbutton.png)
 
 ### Forcesensor Pressed
 
@@ -66,10 +63,8 @@ basic.forever(function () {
     }
 })
 ```
-![buttonpressed](https://github.com/codepada/gigo/blob/master/picture/buttonispressed.png)
 
 ### motor
-![motor](https://github.com/codepada/gigo/blob/master/picture/motor.png)
 
 ```package
 control motor with select port A ,E ,F, G ,H  
@@ -88,10 +83,8 @@ input.onButtonPressed(Button.B, function () {
 })
 
 ```
-![DDM motor](https://github.com/codepada/gigo/blob/master/picture/motorcontrol.png)
 
 ### continuesd servo
-![continuesd servor](https://github.com/codepada/gigo/blob/master/picture/servocon.png)
 ```package
 control ContinuousServo
     Left
@@ -110,10 +103,8 @@ input.onButtonPressed(Button.B, function () {
 })
 
 ```
-![continuesd](https://github.com/codepada/gigo/blob/master/picture/motorservocontrol.png)
 
 ### LED gigo
-![ led](https://github.com/codepada/gigo/blob/master/picture/led.png)
 ```package
 select led port A , B, C , D ,E ,F, G ,H 
 control with toggle on off
@@ -127,7 +118,6 @@ input.onButtonPressed(Button.B, function () {
 })
 
 ```
-![LEDcontrol](https://github.com/codepada/gigo/blob/master/picture/ledcontrol.png)
 
 ## License
 
