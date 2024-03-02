@@ -21,7 +21,7 @@ Blocks that support [LEARNING LAB - MICROBIT COMPATIBLE ROBOT](https://padabook.
 ![Box](https://github.com/codepada/gigo/blob/master/picture/micorbitbox.png)
 ![pinout](https://github.com/codepada/gigo/blob/master/picture/pinout.png)
 ### gigo pinout
-```blocks
+```package
 pinout gigo control box
 A(P20,P19)
 B(x,P14)
