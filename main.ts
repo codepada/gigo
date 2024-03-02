@@ -117,7 +117,7 @@ namespace motor {
         [MotorChannel.H]: DigitalPin.P1,
     }
     //% color=#E7734B
-    //% direction.defl=motorShaftDirection.HIGH
+    //% direction.defl=MotorShaftDirection.HIGH
     //% block="stop motor $channel"
     //% group="Motor"
     export function MotorStop(channel: MotorChannel): void {
@@ -146,7 +146,7 @@ namespace motor {
     //% block="motor $channel direction $direction speed $speed"
     //% speed.min=0 speed.max=255
     //% speed.defl=100
-    //% direction.defl=motorShaftDirection.HIGH
+    //% direction.defl=MotorShaftDirection.HIGH
     //% group="Motor"
     //% color=#E7734B
     export function motor_direction_LR(channel: MotorChannel, direction: MotorShaftDirection, speed: number): void {
