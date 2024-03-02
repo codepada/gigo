@@ -1,7 +1,3 @@
-
-
-
-//% color=#E7734B icon="\uf2db"
 namespace sensor {
     //external button
     export enum ForcesensorChannel {
@@ -41,14 +37,11 @@ namespace sensor {
     //% group="Logic Sensor"
     export function ButtonPressed(pin: ForcesensorChannel): boolean {
         pins.setPull(ForcesensorChannels[pin], PinPullMode.PullUp);
-        let read = ForcesensorChannels[pin];
-        return pins.digitalReadPin(read) == 0;
+        let read2 = ForcesensorChannels[pin];
+        return pins.digitalReadPin(read2) == 0;
     }
 
 }
-
-
-//% color=#E7734B icon="\uf48b"
 namespace motor {
     export enum ServoconChannel {
         //% block="P1"
@@ -139,11 +132,11 @@ namespace motor {
     //% group="Motor"
     //% color=#E7734B
     export function motor_direction_number(channel: MotorChannel, direction: number, speed: number): void {
-        let dirPin = MotorChannels[channel];
-        let speedPin = MotorSpeedPins[channel];
+        let dirPin2 = MotorChannels[channel];
+        let speedPin2 = MotorSpeedPins[channel];
 
-        pins.digitalWritePin(dirPin, direction);
-        pins.analogWritePin(speedPin, pins.map(speed, 0, 255, 0, 1023));
+        pins.digitalWritePin(dirPin2, direction);
+        pins.analogWritePin(speedPin2, pins.map(speed, 0, 255, 0, 1023));
     }
 
     //% color=#E7734B
@@ -154,10 +147,10 @@ namespace motor {
     //% group="Motor"
     //% color=#E7734B
     export function motor_direction_LR(channel: MotorChannel, direction: MotorShaftDirection, speed: number): void {
-        let dirPin = MotorChannels[channel];
-        let speedPin = MotorSpeedPins[channel];
-        pins.digitalWritePin(dirPin, direction);
-        pins.analogWritePin(speedPin, pins.map(speed, 0, 255, 0, 1023));
+        let dirPin3 = MotorChannels[channel];
+        let speedPin3 = MotorSpeedPins[channel];
+        pins.digitalWritePin(dirPin3, direction);
+        pins.analogWritePin(speedPin3, pins.map(speed, 0, 255, 0, 1023));
     }
     
     //% color=#E84E19
@@ -170,8 +163,6 @@ namespace motor {
 
     }
 }
-
-//% weight=5 color=#E7734B icon="\uf110"
 namespace gigoLED {
     //led
     export enum lEDChannel {
@@ -229,9 +220,9 @@ namespace gigoLED {
     //% leds.defl=lEDChannel.D
     //% group="Led"
     export function led(leds: lEDChannel, Status: lEDShaftonoff): void {
-        let ledg = lEDChannels[leds];
+        let ledg2 = lEDChannels[leds];
 
-        pins.digitalWritePin(ledg, Status);
+        pins.digitalWritePin(ledg2, Status);
 
     }
     //% color=#FACB09
@@ -248,10 +239,9 @@ namespace gigoLED {
 
         }
         else {
-            let pinled = lEDChannels[pin];
-            pins.digitalWritePin(pinled, 0);
+            let pinled2 = lEDChannels[pin];
+            pins.digitalWritePin(pinled2, 0);
 
         }
     }
 }
-

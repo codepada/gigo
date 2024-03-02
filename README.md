@@ -60,10 +60,20 @@ control motor with select port A ,E ,F, G ,H
 
 ### LED gigo
 ![ led](https://github.com/codepada/gigo/blob/master/picture/led.png)
-```blocks
+```package
 select led port A , B, C , D ,E ,F, G ,H and control with toggle 
 ```
+```blocks
+input.onButtonPressed(Button.A, function () {
+    gigoLED.ledBrightness(gigoLED.lEDChannel.D, true)
+})
+input.onButtonPressed(Button.B, function () {
+    gigoLED.ledBrightness(gigoLED.lEDChannel.D, false)
+})
+
+```
 ![LEDcontrol](https://github.com/codepada/gigo/blob/master/picture/ledcontrol.png)
+
 ## License
 
 * MIT
