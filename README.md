@@ -36,7 +36,7 @@ H(P8,P1)
 ![forcesensor](https://github.com/codepada/gigo/blob/master/picture/forcesensor.png)
 
 ```package
-for read force sensor and show number on led
+Read force sensor and show number (0 or 1)
 ```
 ```blocks
 basic.forever(function () {
@@ -48,7 +48,8 @@ basic.forever(function () {
 ### Forcesensor Pressed
 
 ```package
-code for  Forcesensor  is pressed , when forcesensor is pressed led show icon Heart
+when forcesensor is pressed led show icon Heart
+    ture and false
 ```
 ```blocks
 basic.forever(function () {
@@ -63,7 +64,12 @@ basic.forever(function () {
 ![motor](https://github.com/codepada/gigo/blob/master/picture/motor.png)
 
 ```package
-control motor with select port A ,E ,F, G ,H 
+control motor with select port A ,E ,F, G ,H  
+direction
+    Left
+    Right
+    Stop  
+Speed 0-255  
 ```
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -78,6 +84,12 @@ input.onButtonPressed(Button.B, function () {
 
 ### continuesd servo
 ![continuesd servor](https://github.com/codepada/gigo/blob/master/picture/servocon.png)
+```package
+control ContinuousServo
+    Left
+    Right
+    Stop
+```
 ```blocks
 input.onButtonPressed(Button.A, function () {
     motor.ContinuousServo(motor.ServoconChannel.P1, motor.ServoconShaft.Left)
@@ -95,7 +107,8 @@ input.onButtonPressed(Button.B, function () {
 ### LED gigo
 ![ led](https://github.com/codepada/gigo/blob/master/picture/led.png)
 ```package
-select led port A , B, C , D ,E ,F, G ,H and control with toggle 
+select led port A , B, C , D ,E ,F, G ,H 
+control with toggle on off
 ```
 ```blocks
 input.onButtonPressed(Button.A, function () {
