@@ -1,6 +1,6 @@
 //% color=#E7734B icon="\uf2db"
 namespace sensor {
-    
+
     export enum ForcesensorChannel {
         //% block="A (P20)"
         A,
@@ -155,7 +155,7 @@ namespace motor {
         pins.digitalWritePin(dirPin3, direction);
         pins.analogWritePin(speedPin3, pins.map(speed, 0, 255, 0, 1023));
     }
-    
+
     //% color=#E84E19
     //% block"continuous Servo $pinSV direction $direction"
     //% direction.defl=90
