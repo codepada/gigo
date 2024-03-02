@@ -1,3 +1,4 @@
+//% color=#E7734B icon="\uf2db"
 namespace sensor {
     
     export enum ForcesensorChannel {
@@ -42,6 +43,8 @@ namespace sensor {
     }
 
 }
+
+//% color=#E7734B icon="\uf48b"
 namespace motor {
     export enum ServoconChannel {
         //% block="P1"
@@ -163,6 +166,8 @@ namespace motor {
 
     }
 }
+
+//% weight=5 color=#E7734B icon="\uf110"
 namespace gigoLED {
     //led
     export enum LEDChannel {
