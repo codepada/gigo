@@ -18,6 +18,14 @@ Blocks that support [LEARNING LAB - MICROBIT COMPATIBLE ROBOT](https://padabook.
 
 
 ## Gigo control box
+```package
+The kit begins with instructions to build 16 simple 
+motorized robots with sensors that can control the robots. 
+With over one hundred snap-together, versatile building pieces, 
+kids can also construct new robots of their own design!
+Once you've built your robots, you'll add code to program them 
+and bring them to life. Robotics Workshop utilizes micro:bit
+```
 ![Box](https://github.com/codepada/gigo/blob/master/picture/micorbitbox.png)
 ![pinout](https://github.com/codepada/gigo/blob/master/picture/pinout.png)
 ### gigo pinout
