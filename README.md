@@ -34,27 +34,61 @@ H(P8,P1)
 ```
 ### Read Forcesensor
 ![forcesensor](https://github.com/codepada/gigo/blob/master/picture/forcesensor.png)
-```blocks
+
+```package
 for read force sensor and show number on led
+```
+```blocks
+basic.forever(function () {
+    basic.showNumber(sensor.Readbutton(sensor.ForcesensorChannel.A))
+})
 ```
 ![buttonread](https://github.com/codepada/gigo/blob/master/picture/readbutton.png)
 
 ### Forcesensor Pressed
-```blocks
+
+```package
 code for  Forcesensor  is pressed , when forcesensor is pressed led show icon Heart
+```
+```blocks
+basic.forever(function () {
+    if (sensor.ButtonPressed(sensor.ForcesensorChannel.A)) {
+        basic.showIcon(IconNames.Heart)
+    }
+})
 ```
 ![buttonpressed](https://github.com/codepada/gigo/blob/master/picture/buttonispressed.png)
 
 ### motor
 ![motor](https://github.com/codepada/gigo/blob/master/picture/motor.png)
-```blocks
+
+```package
 control motor with select port A ,E ,F, G ,H 
+```
+```blocks
+input.onButtonPressed(Button.A, function () {
+    motor.motor_direction_LR(motor.MotorChannel.E, motor.MotorShaftDirection.HIGH, 100)
+})
+input.onButtonPressed(Button.B, function () {
+    motor.MotorStop(motor.MotorChannel.E)
+})
+
 ```
 ![DDM motor](https://github.com/codepada/gigo/blob/master/picture/motorcontrol.png)
 
 ### continuesd servo
 ![continuesd servor](https://github.com/codepada/gigo/blob/master/picture/servocon.png)
 ```blocks
+input.onButtonPressed(Button.A, function () {
+    motor.ContinuousServo(motor.ServoconChannel.P1, motor.ServoconShaft.Left)
+})
+input.onButtonPressed(Button.AB, function () {
+    motor.ContinuousServo(motor.ServoconChannel.P1, motor.ServoconShaft.Stop)
+})
+input.onButtonPressed(Button.B, function () {
+    motor.ContinuousServo(motor.ServoconChannel.P1, motor.ServoconShaft.Right)
+})
+
 ```
 ![continuesd](https://github.com/codepada/gigo/blob/master/picture/motorservocontrol.png)
 
