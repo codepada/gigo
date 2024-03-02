@@ -19,13 +19,7 @@ Blocks that support [LEARNING LAB - MICROBIT COMPATIBLE ROBOT](https://padabook.
 
 ## Gigo control box
 ```package
-As shown below, the micro:bit control box uses six AA batteries,
-with 1 external input power interface (female micro USB). 
-Use a power supply around DC 5V/2A (a similar power level to a tablet charger,
-no more). Batteries cannot be charged while in the device,
-any batteries in the device will stop being used when it is plugged in.
-There is also a built-in buzzer, 8 sets of I/O (Gigo type)and
-8 sets of I/O DuPont connectors (see the micro:bit pin configuration diagram for details).
+Gigo control box is also a built-in buzzer, 8 sets of I/O (Gigo type)and 8 sets of I/O DuPont connectors.
 These I/O interfaces provide micro:bit external connections to the 50X PLANETARY GEARBOX (DDM),
 180° SERVO MOTOR (METAL GEAR), LINE SENSOR, FORCE SENSOR, and other devices.
 Users can also purchase other compatible sensors or servo motors.
