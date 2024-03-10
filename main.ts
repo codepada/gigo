@@ -188,7 +188,7 @@ namespace gigoLED {
         //% block="H (P1)"
         H,
     }
-    export let LEDChannels: { [key: number]: DigitalPin } = {
+    export let lEDChannels: { [key: number]: DigitalPin } = {
         [LEDChannel.A]: DigitalPin.P19,
         [LEDChannel.B]: DigitalPin.P14,
         [LEDChannel.C]: DigitalPin.P2,
@@ -213,7 +213,7 @@ namespace gigoLED {
     //% leds.defl=lEDChannel.D
     //% group="Led"
     export function ledstatus(leds: LEDChannel, Status: number): void {
-        let led = LEDChannels[leds];
+        let led = lEDChannels[leds];
 
         pins.digitalWritePin(led, Status);
 
@@ -229,12 +229,12 @@ namespace gigoLED {
     //% group="Led"
     export function ledToggle(pin: LEDChannel, ledstate: boolean): void {
         if (ledstate) {
-            let pinled = LEDChannels[pin];
+            let pinled = lEDChannels[pin];
             pins.digitalWritePin(pinled, 1);
 
         }
         else {
-            let pinled = LEDChannels[pin];
+            let pinled = lEDChannels[pin];
             pins.digitalWritePin(pinled, 0);
 
         }
