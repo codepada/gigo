@@ -44,7 +44,7 @@ Read force sensor and show number (0 or 1)
 
 ```blocks
 basic.forever(function () {
-    basic.showNumber(sensor.Readbutton(sensor.ForcesensorChannel.A))
+    basic.showNumber(sensor.readButton(sensor.ForcesensorChannel.A))
 })
 ```
 
@@ -56,7 +56,7 @@ when forcesensor is pressed led show icon Heart
 
 ```blocks
 basic.forever(function () {
-    if (sensor.ButtonPressed(sensor.ForcesensorChannel.A)) {
+    if (sensor.buttonPressed(sensor.ForcesensorChannel.A)) {
         basic.showIcon(IconNames.Heart)
     }
 })
@@ -74,10 +74,10 @@ Speed 0-255
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    motor.motor_direction_LR(motor.MotorChannel.E, motor.MotorShaftDirection.HIGH, 100)
+    motor.motorDirectionLR(motor.MotorChannel.E, motor.MotorShaftDirection.HIGH, 100)
 })
 input.onButtonPressed(Button.B, function () {
-    motor.MotorStop(motor.MotorChannel.E)
+    motor.motorStop(motor.MotorChannel.E)
 })
 
 ```
@@ -91,13 +91,13 @@ control ContinuousServo
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    motor.ContinuousServo(motor.ServoconChannel.P1, motor.ServoconShaft.Left)
+    motor.continuousServo(motor.ServoconChannel.P1, motor.ServoconShaft.Left)
 })
 input.onButtonPressed(Button.AB, function () {
-    motor.ContinuousServo(motor.ServoconChannel.P1, motor.ServoconShaft.Stop)
+    motor.continuousServo(motor.ServoconChannel.P1, motor.ServoconShaft.Stop)
 })
 input.onButtonPressed(Button.B, function () {
-    motor.ContinuousServo(motor.ServoconChannel.P1, motor.ServoconShaft.Right)
+    motor.continuousServo(motor.ServoconChannel.P1, motor.ServoconShaft.Right)
 })
 
 ```
@@ -109,10 +109,10 @@ control with toggle on off
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    gigoLED.led_toggle(gigoLED.LEDChannel.D, true)
+    gigoLED.ledToggle(gigoLED.LEDChannel.D, true)
 })
 input.onButtonPressed(Button.B, function () {
-    gigoLED.led_toggle(gigoLED.LEDChannel.D, false)
+    gigoLED.ledToggle(gigoLED.LEDChannel.D, false)
 })
 
 ```
