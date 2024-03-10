@@ -98,7 +98,7 @@ namespace motor {
         //% block="H (P1,P8)""
         H,
     }
-    export enum MotorShaftDirection {
+    export enum motorShaftDirection {
         //% block="left"
         LOW,
         //% block="right"
@@ -149,7 +149,7 @@ namespace motor {
     //% direction.defl=MotorShaftDirection.HIGH
     //% group="Motor"
     //% color=#E7734B
-    export function motorDirectionLR(channel: MotorChannel, direction: MotorShaftDirection, speed: number): void {
+    export function motorDirectionLR(channel: MotorChannel, direction: motorShaftDirection, speed: number): void {
         let dirPin3 = MotorChannels[channel];
         let speedPin3 = MotorSpeedPins[channel];
         pins.digitalWritePin(dirPin3, direction);
@@ -198,15 +198,7 @@ namespace gigoLED {
         [LEDChannel.G]: DigitalPin.P12,
         [LEDChannel.H]: DigitalPin.P1,
     }
-    export enum LEDShaftonoff {
-        //% block="off"
-        LOW,
-        //% block="on"
-        HIGH,
-
-    }
-
-
+    
     //% color=#FACB09
     //% block="led $leds status $Status"
     //% Status.min=0 Status.max=1
