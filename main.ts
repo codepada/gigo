@@ -104,6 +104,10 @@ namespace motor {
         //% block="right"
         HIGH,
     }
+    export let MotorSDD:{ [key: number]: number }={
+        [MotorShaftDirection.LOW]: 0,
+        [MotorShaftDirection.HIGH]: 1,
+    }
     export let MotorSpeedPins: { [key: number]: AnalogPin } = {
         [MotorChannel.E]: AnalogPin.P16,
         [MotorChannel.F]: AnalogPin.P14,
@@ -152,7 +156,8 @@ namespace motor {
     export function motorDirectionLR(channel: MotorChannel, direction: MotorShaftDirection, speed: number): void {
         let dirPin3 = MotorChannels[channel];
         let speedPin3 = MotorSpeedPins[channel];
-        pins.digitalWritePin(dirPin3, direction);
+        let direct = MotorSDD[direction];
+        pins.digitalWritePin(dirPin3, direct);
         pins.analogWritePin(speedPin3, pins.map(speed, 0, 255, 0, 1023));
     }
 
