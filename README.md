@@ -18,15 +18,15 @@ Blocks that support [LEARNING LAB - MICROBIT COMPATIBLE ROBOT](https://padabook.
 
 
 ## Gigo control box
-```package
+
 Gigo control box is also a built-in buzzer, 8 sets of I/O (Gigo type)and 8 sets of I/O DuPont connectors.
 These I/O interfaces provide micro:bit external connections to the 50X PLANETARY GEARBOX (DDM),
 180° SERVO MOTOR (METAL GEAR), LINE SENSOR, FORCE SENSOR, and other devices.
 Users can also purchase other compatible sensors or servo motors.
-```
+
 
 ### gigo pinout
-```package
+
 pinout gigo control box
 A(P20,P19)
 B(x,P14)
@@ -36,12 +36,12 @@ E(P16,P15)
 F(P14,P13)
 G(P2,P12)
 H(P8,P1)
-```
+
 ### Read Forcesensor
 
-```package
+
 Read force sensor and show number (0 or 1)
-```
+
 ```blocks
 basic.forever(function () {
     basic.showNumber(sensor.Readbutton(sensor.ForcesensorChannel.A))
@@ -50,10 +50,10 @@ basic.forever(function () {
 
 ### Forcesensor Pressed
 
-```package
+
 when forcesensor is pressed led show icon Heart
     true and false
-```
+
 ```blocks
 basic.forever(function () {
     if (sensor.ButtonPressed(sensor.ForcesensorChannel.A)) {
@@ -64,14 +64,14 @@ basic.forever(function () {
 
 ### motor
 
-```package
+
 control motor with select port A ,E ,F, G ,H  
 direction
     Left
     Right
     Stop  
 Speed 0-255  
-```
+
 ```blocks
 input.onButtonPressed(Button.A, function () {
     motor.motor_direction_LR(motor.MotorChannel.E, motor.MotorShaftDirection.HIGH, 100)
@@ -83,12 +83,12 @@ input.onButtonPressed(Button.B, function () {
 ```
 
 ### continuesd servo
-```package
+
 control ContinuousServo
     Left
     Right
     Stop
-```
+
 ```blocks
 input.onButtonPressed(Button.A, function () {
     motor.ContinuousServo(motor.ServoconChannel.P1, motor.ServoconShaft.Left)
@@ -103,10 +103,10 @@ input.onButtonPressed(Button.B, function () {
 ```
 
 ### LED gigo
-```package
+
 select led port A , B, C , D ,E ,F, G ,H 
 control with toggle on off
-```
+
 ```blocks
 input.onButtonPressed(Button.A, function () {
     gigoLED.led_toggle(gigoLED.LEDChannel.D, true)
@@ -124,9 +124,9 @@ input.onButtonPressed(Button.B, function () {
 ## Supported targets
 For microbit
 
-```package
+
 Pada Education=github.com/codepada/gigo
-```
+
 
 
 ## Edit this project
