@@ -150,7 +150,7 @@ namespace motor {
     //% block="motor $channel direction $direction speed $speed"
     //% speed.min=0 speed.max=255
     //% speed.defl=100
-    //% direction.defl=MotorShaftDirection.HIGH
+    //% direction.defl=motor.MotorShaftDirection.HIGH
     //% group="Motor"
     //% color=#E7734B
     export function motorDirectionLR(channel: MotorChannel, direction: MotorShaftDirection, speed: number): void {
