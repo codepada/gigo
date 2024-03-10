@@ -207,7 +207,7 @@ namespace gigoLED {
     //% color=#FACB09
     //% block="led $leds to $status"
     //% status.min=0 status.max=1
-    //% leds.defl=lEDChannel.D
+    //% leds.defl=ledToggle.lEDChannel.D
     //% group="Led"
     export function ledstatus(leds: lEDChannel, status: number): void {
         let led = lEDChannels[leds];
@@ -222,7 +222,7 @@ namespace gigoLED {
     //% blockId=led block="led %pin $ledstate"
     //% ledstate.shadow="toggleOnOff"
     //% expandableArgumentMode="toggle"
-    //% pin.defl=lEDChannel.D
+    //% pin.defl=ledToggle.lEDChannel.D
     //% group="Led"
     export function ledToggle(pin: lEDChannel, ledstate: boolean): void {
         if (ledstate) {
