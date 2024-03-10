@@ -98,7 +98,7 @@ namespace motor {
         //% block="H (P1,P8)""
         H,
     }
-    export enum motorShaftDirection {
+    export enum MotorShaftDirection {
         //% block="left"
         LOW,
         //% block="right"
@@ -149,7 +149,7 @@ namespace motor {
     //% direction.defl=MotorShaftDirection.HIGH
     //% group="Motor"
     //% color=#E7734B
-    export function motorDirectionLR(channel: MotorChannel, direction: motorShaftDirection, speed: number): void {
+    export function motorDirectionLR(channel: MotorChannel, direction: MotorShaftDirection, speed: number): void {
         let dirPin3 = MotorChannels[channel];
         let speedPin3 = MotorSpeedPins[channel];
         pins.digitalWritePin(dirPin3, direction);
@@ -170,7 +170,7 @@ namespace motor {
 //% weight=5 color=#E7734B icon="\uf110"
 namespace gigoLED {
     //led
-    export enum LEDChannel {
+    export enum lEDChannel {
         //% block="A (P19)"
         A,
         //% block="B (P14)"
@@ -189,14 +189,14 @@ namespace gigoLED {
         H,
     }
     export let lEDChannels: { [key: number]: DigitalPin } = {
-        [LEDChannel.A]: DigitalPin.P19,
-        [LEDChannel.B]: DigitalPin.P14,
-        [LEDChannel.C]: DigitalPin.P2,
-        [LEDChannel.D]: DigitalPin.P8,
-        [LEDChannel.E]: DigitalPin.P15,
-        [LEDChannel.F]: DigitalPin.P13,
-        [LEDChannel.G]: DigitalPin.P12,
-        [LEDChannel.H]: DigitalPin.P1,
+        [lEDChannel.A]: DigitalPin.P19,
+        [lEDChannel.B]: DigitalPin.P14,
+        [lEDChannel.C]: DigitalPin.P2,
+        [lEDChannel.D]: DigitalPin.P8,
+        [lEDChannel.E]: DigitalPin.P15,
+        [lEDChannel.F]: DigitalPin.P13,
+        [lEDChannel.G]: DigitalPin.P12,
+        [lEDChannel.H]: DigitalPin.P1,
     }
     
     //% color=#FACB09
@@ -204,7 +204,7 @@ namespace gigoLED {
     //% Status.min=0 Status.max=1
     //% leds.defl=lEDChannel.D
     //% group="Led"
-    export function ledstatus(leds: LEDChannel, Status: number): void {
+    export function ledstatus(leds: lEDChannel, Status: number): void {
         let led = lEDChannels[leds];
 
         pins.digitalWritePin(led, Status);
@@ -219,7 +219,7 @@ namespace gigoLED {
     //% expandableArgumentMode="toggle"
     //% pin.defl=lEDChannel.D
     //% group="Led"
-    export function ledToggle(pin: LEDChannel, ledstate: boolean): void {
+    export function ledToggle(pin: lEDChannel, ledstate: boolean): void {
         if (ledstate) {
             let pinled = lEDChannels[pin];
             pins.digitalWritePin(pinled, 1);
