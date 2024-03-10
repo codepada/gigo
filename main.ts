@@ -163,7 +163,7 @@ namespace motor {
 
     //% color=#E84E19
     //% block"continuous servo $pinSV direction $direction"
-    //% direction.defl=90
+    //% direction.defl=motor.ServoconShaft.right
     //% group="Servo"
     export function continuousServo(pinSV: ServoconChannel, direction: ServoconShaft): void {
         let pinservo = ServoconChannels[pinSV];
