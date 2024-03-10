@@ -200,14 +200,14 @@ namespace gigoLED {
     }
     
     //% color=#FACB09
-    //% block="led $leds status $Status"
-    //% Status.min=0 Status.max=1
+    //% block="led $leds to $status"
+    //% status.min=0 status.max=1
     //% leds.defl=lEDChannel.D
     //% group="Led"
-    export function ledstatus(leds: lEDChannel, Status: number): void {
+    export function ledstatus(leds: lEDChannel, status: number): void {
         let led = lEDChannels[leds];
 
-        pins.digitalWritePin(led, Status);
+        pins.digitalWritePin(led, status);
 
     }
 
