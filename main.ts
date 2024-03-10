@@ -25,7 +25,7 @@ namespace sensor {
     //% color=#000000
     //% block="read button $pin (0-1)"
     //% group="Read Sensor"
-    export function Readbutton(pin: ForcesensorChannel): number {
+    export function readButton(pin: ForcesensorChannel): number {
         let read = ForcesensorChannels[pin];
         pins.setPull(ForcesensorChannels[pin], PinPullMode.PullUp);
         let reading = pins.digitalReadPin(read);
@@ -36,7 +36,7 @@ namespace sensor {
     //% color=#3D3430    
     //% block="on button $pin pressed"
     //% group="Logic Sensor"
-    export function ButtonPressed(pin: ForcesensorChannel): boolean {
+    export function buttonPressed(pin: ForcesensorChannel): boolean {
         pins.setPull(ForcesensorChannels[pin], PinPullMode.PullUp);
         let read2 = ForcesensorChannels[pin];
         return pins.digitalReadPin(read2) == 0;
@@ -120,7 +120,7 @@ namespace motor {
     //% direction.defl=MotorShaftDirection.HIGH
     //% block="stop motor $channel"
     //% group="Motor"
-    export function MotorStop(channel: MotorChannel): void {
+    export function motorStop(channel: MotorChannel): void {
         let dirPin = MotorChannels[channel];
         let speedPin = MotorSpeedPins[channel];
         pins.digitalWritePin(dirPin, 0);
@@ -134,7 +134,7 @@ namespace motor {
     //% direction.min=0 direction.max=1
     //% group="Motor"
     //% color=#E7734B
-    export function motor_direction_number(channel: MotorChannel, direction: number, speed: number): void {
+    export function motorDirectionNumber(channel: MotorChannel, direction: number, speed: number): void {
         let dirPin2 = MotorChannels[channel];
         let speedPin2 = MotorSpeedPins[channel];
 
@@ -149,7 +149,7 @@ namespace motor {
     //% direction.defl=MotorShaftDirection.HIGH
     //% group="Motor"
     //% color=#E7734B
-    export function motor_direction_LR(channel: MotorChannel, direction: MotorShaftDirection, speed: number): void {
+    export function motorDirectionLR(channel: MotorChannel, direction: MotorShaftDirection, speed: number): void {
         let dirPin3 = MotorChannels[channel];
         let speedPin3 = MotorSpeedPins[channel];
         pins.digitalWritePin(dirPin3, direction);
@@ -157,10 +157,10 @@ namespace motor {
     }
 
     //% color=#E84E19
-    //% block"continuous Servo $pinSV direction $direction"
+    //% block"continuous servo $pinSV direction $direction"
     //% direction.defl=90
     //% group="Servo"
-    export function ContinuousServo(pinSV: ServoconChannel, direction: ServoconShaft): void {
+    export function continuousServo(pinSV: ServoconChannel, direction: ServoconShaft): void {
         let pinservo = ServoconChannels[pinSV];
         pins.servoWritePin(pinservo, direction);
 
@@ -212,7 +212,7 @@ namespace gigoLED {
     //% Status.min=0 Status.max=1
     //% leds.defl=lEDChannel.D
     //% group="Led"
-    export function led_status(leds: LEDChannel, Status: number): void {
+    export function ledstatus(leds: LEDChannel, Status: number): void {
         let led = LEDChannels[leds];
 
         pins.digitalWritePin(led, Status);
@@ -227,7 +227,7 @@ namespace gigoLED {
     //% expandableArgumentMode="toggle"
     //% pin.defl=lEDChannel.D
     //% group="Led"
-    export function led_toggle(pin: LEDChannel, ledstate: boolean): void {
+    export function ledToggle(pin: LEDChannel, ledstate: boolean): void {
         if (ledstate) {
             let pinled = LEDChannels[pin];
             pins.digitalWritePin(pinled, 1);
