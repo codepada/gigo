@@ -75,17 +75,17 @@ namespace motor {
         [ServoconChannel.P16]: AnalogPin.P16,
     }
     export enum ServoconShaft {
-        //% block="Right"
-        Right = 0,
-        //% block="Left"
-        Left = 180,
-        //% block="Stop"
-        Stop = 90,
+        //% block="right"
+        right = 0,
+        //% block="left"
+        left = 180,
+        //% block="stop"
+        stop = 90,
     }
     export let DegreesServocon: { [key: number]: number } = {
-        [ServoconShaft.Right]: 0,
-        [ServoconShaft.Left]: 180,
-        [ServoconShaft.Stop]: 90,
+        [ServoconShaft.right]: 0,
+        [ServoconShaft.left]: 180,
+        [ServoconShaft.stop]: 90,
 
     }
     export enum MotorChannel {
@@ -99,9 +99,9 @@ namespace motor {
         H,
     }
     export enum MotorShaftDirection {
-        //% block="Left"
+        //% block="left"
         LOW,
-        //% block="Right"
+        //% block="right"
         HIGH,
     }
     export let MotorSpeedPins: { [key: number]: AnalogPin } = {
@@ -208,7 +208,7 @@ namespace gigoLED {
 
 
     //% color=#FACB09
-    //% block="led $leds Status $Status"
+    //% block="led $leds status $Status"
     //% Status.min=0 Status.max=1
     //% leds.defl=lEDChannel.D
     //% group="Led"
@@ -219,17 +219,7 @@ namespace gigoLED {
 
     }
 
-    //% color=#FACB09
-    //% block="led $leds Status $Status"
-    //% Status.defl=lEDShaftonoff.HIGH*
-    //% leds.defl=lEDChannel.D
-    //% group="Led"
-    export function led_onoff(leds: LEDChannel, Status: LEDShaftonoff): void {
-        let led = LEDChannels[leds];
-
-        pins.digitalWritePin(led, Status);
-
-    }
+    
     //% color=#FACB09
     //toggle led
     //% blockId=led block="led %pin $ledstate"
